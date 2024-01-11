@@ -18,6 +18,7 @@ datasets/
 mmdetection/
 work_dirs/
 Yolo-to-COCO-format-converter/
+output_tensor/
 
 # Distribution / packaging
 .Python
