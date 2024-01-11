@@ -18,7 +18,7 @@ def parse_args():
     parser.add_argument(
         '--device', default='cuda:0', help='Device used for inference')
     parser.add_argument(
-        '--score-thr', type=float, default=0.3, help='Bbox score threshold')
+        '--score-thr', type=float, default=0.7, help='Bbox score threshold')
     parser.add_argument('--out', type=str, help='Output video file')
     parser.add_argument('--show', action='store_true', help='Show video')
     parser.add_argument(
