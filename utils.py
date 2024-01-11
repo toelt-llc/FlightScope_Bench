@@ -85,8 +85,11 @@ def plot_curves(directory, color='sienna', separate_subplots=True):
 
         # Customize the plot
         plt.legend()
-        plt.xlabel("Steps")
+        plt.xlabel("Epochs")
         plt.ylabel("Values")
+        plt.ylim(0, 1)
+        plt.xlim(0, 500)
+        plt.grid(True)
         plt.show()
 
 
