@@ -38,8 +38,8 @@ def plot_curves(directory, color='sienna', separate_subplots=True):
     if separate_subplots:
         # Calculate the number of subplots needed based on the number of CSV files
         num_files = len(csv_files)
-        num_rows = (num_files // 3) + (1 if num_files % 3 != 0 else 0)
-        num_cols = min(num_files, 3)
+        num_rows = (num_files // 2) + (1 if num_files % 2 != 0 else 0)
+        num_cols = min(num_files, 2)
 
         # Create subplot grid
         fig, axs = plt.subplots(num_rows, num_cols, figsize=(15, 10))
@@ -91,6 +91,7 @@ def plot_curves(directory, color='sienna', separate_subplots=True):
         plt.xlim(0, 500)
         plt.grid(True)
         plt.show()
+
 
 
 def concatenate_videos(videos_folder, output_folder="./md_vizualiser"):
