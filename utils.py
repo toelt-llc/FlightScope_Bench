@@ -4,6 +4,7 @@ import numpy as np
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
+import cv2
 
 def getBounds(geometry):
     try: 
@@ -64,3 +65,61 @@ def plot_curves(directory, color):
     # Customize the plot
     plt.tight_layout()
     plt.show()
+
+def concatenate_videos(videos_folder, output_folder="./md_vizualiser"):
+    # Create the output folder if it doesn't exist
+    os.makedirs(output_folder, exist_ok=True)
+
+    # Get the list of video files in the folder
+    video_files = [f for f in os.listdir(videos_folder) if f.endswith(".mp4") and f.startswith("Barcelona_airport_")]
+
+    # Sort the files to ensure consistent ordering
+    video_files.sort()
+
+    # Iterate through pairs of video files and concatenate them horizontally
+    for i in range(0, len(video_files), 2):
+        video1 = cv2.VideoCapture(os.path.join(videos_folder, video_files[i]))
+
+        # Check if the video file was opened successfully
+        if not video1.isOpened():
+            print(f"Error: Could not open {video_files[i]}")
+            continue
+
+        video2 = cv2.VideoCapture(os.path.join(videos_folder, video_files[i + 1]))
+
+        # Check if the video file was opened successfully
+        if not video2.isOpened():
+            print(f"Error: Could not open {video_files[i + 1]}")
+            video1.release()
+            continue
+
+        # Get the video properties
+        width = int(video1.get(3))
+        height = int(video1.get(4))
+
+        # Create an output video writer
+        output_path = os.path.join(output_folder, f"concatenated_{i//2}.mp4")
+        output_video = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*"mp4v"), 30, (width * 2, height))
+
+        while True:
+            ret1, frame1 = video1.read()
+            ret2, frame2 = video2.read()
+
+            if not ret1 or not ret2:
+                break
+
+            # Concatenate frames horizontally
+            concatenated_frame = cv2.hconcat([frame1, frame2])
+
+            # Write the concatenated frame to the output video
+            output_video.write(concatenated_frame)
+
+        # Release video captures and writer
+        video1.release()
+        video2.release()
+        output_video.release()
+
+    print("Concatenation complete.")
+
+# Example usage:
+# concatenate_videos("path/to/your/videos/folder")
