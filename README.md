@@ -5,8 +5,9 @@ This repository contains code for a Flightscope benchmark paper. A comparative s
 
 The following Gif is a video inference of Barcelona Airport of the trained algorithms with a detection threshold of 70%. You can find the original video at [ShutterStock](https://www.shutterstock.com/video/clip-1023402088-barcelona-airport-top-view-aircraft-terminal-building).
 
-![OD_previewreduced-ezgif com-optimize](https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/0d3b0fb7-6164-43d1-8e02-99e7d56a47f0)
+<!--![OD_previewreduced-ezgif com-optimize](https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/0d3b0fb7-6164-43d1-8e02-99e7d56a47f0)-->
 
+[concatenated_video.webm](https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/a5269a4b-9391-4e39-96a9-908802495206)
 
 ## HRPlanesv2 Dataset
 
