@@ -60,6 +60,7 @@ def plot_curves(directory, color='sienna', separate_subplots=True):
             # Plotting the curve with the specified color
             axs[i].plot(steps, values, color=color)
             axs[i].set_title(os.path.splitext(csv_file)[0])  # Use file name as title
+            axs[i].grid(True)
 
         # Customize the plot
         plt.tight_layout()
