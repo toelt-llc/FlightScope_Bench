@@ -32,8 +32,8 @@ def getHeight(bounds):
 
 
 def plot_curves(directory, color='sienna', separate_subplots=True):
-    # Get a list of CSV files in the directory
-    csv_files = [file for file in os.listdir(directory) if file.endswith('.csv')]
+    # Get a list of CSV files in the directory and sort them
+    csv_files = sorted([file for file in os.listdir(directory) if file.endswith('.csv')])
 
     if separate_subplots:
         # Calculate the number of subplots needed based on the number of CSV files
@@ -45,7 +45,7 @@ def plot_curves(directory, color='sienna', separate_subplots=True):
         fig, axs = plt.subplots(num_rows, num_cols, figsize=(15, 10))
         axs = axs.flatten()
 
-        # Iterate over CSV files and plot curves
+        # Iterate over sorted CSV files and plot curves
         for i, csv_file in enumerate(csv_files):
             # Construct the full path to the CSV file
             csv_path = os.path.join(directory, csv_file)
@@ -85,11 +85,13 @@ def plot_curves(directory, color='sienna', separate_subplots=True):
             ax.plot(steps, values, label=os.path.splitext(csv_file)[0], color=plt.cm.viridis(i / len(csv_files)))
 
         # Customize the plot
-        plt.legend()
+        plt.legend(fontsize=18)
         plt.xlabel("Epochs")
         plt.ylabel("Values")
         plt.ylim(0, 1)
         plt.xlim(0, 500)
+        plt.xticks(fontsize=18)
+        plt.yticks(fontsize=18)
         plt.grid(True)
         plt.show()
 
