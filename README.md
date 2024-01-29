@@ -111,4 +111,5 @@ This code is free to use for research and non-commercial purposes.
 
 ---
 
-Feel free to customize the README further according to your specific needs and preferences.
+This code is provided by [Safouane El Ghazouali](https://github.com/safouane95), PhD, Senior researcher AND [Arnaud Gucciardi](https://github.com/a-gucciardi).
+For personal contact: [safouane.elghazouali@gmail.com](mailto:safouane.elghazouali@gmail.com).
