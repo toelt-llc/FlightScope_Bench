@@ -9,10 +9,15 @@ The following Gif is a video inference of Barcelona Airport of the trained algor
 
 [concatenated_video.webm](https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/a5269a4b-9391-4e39-96a9-908802495206)
 
-## HRPlanesv2 Dataset
+## Datasets:
+
+- **HRPlanesv2 Dataset** (for the training and evaluation):
 
 The HRPlanesv2 dataset contains 2120 VHR Google Earth images. To further improve experiment results, images of airports from many different regions with various uses (civil/military/joint) selected and labeled. A total of 14,335 aircrafts have been labeled. Each image is stored as a ".jpg" file of size 4800 x 2703 pixels, and each label is stored as YOLO ".txt" format. Dataset has been split into three parts as 70% train, 20% validation, and test. The aircrafts in the images in the train and validation datasets have a percentage of 80 or more in size. [Link](https://github.com/dilsadunsal/HRPlanesv2-Data-Set)
 
+- **GDIT Dataset** (for evaluation):
+
+The GDIT Aerial Airport dataset consists of aerial images (satellite/remote sensing) containing instances of parked airplanes. All plane types are grouped into a single named "airplane". The total number of images is 338 broadcasted between train, test and validation subsets. All the annotation are in yolo format as well. [Link](https://universe.roboflow.com/gdit/aerial-airport/browse?queryText=&pageSize=200&startingIndex=200&browseQuery=true)
 
 ## Workflows
 
@@ -67,6 +72,7 @@ As the HRPlanesv2 dataset is provided with YOLO annotation (txt file with boundi
 
 ## Run the training from scratch
 
+You can run
 
 ## Weights download
 
@@ -87,6 +93,16 @@ pip install --upgrade gdown
 # Unzip it in the home folder
 %unzip output_tensor.zip
 ```
+
+## Usage (Train from scratch)
+
+All the training and inferences are given in the notebooks:
+
+[SSD](./1_SSD.ipynb), [YOLO v5](./2_yolov5_aircraft.ipynb), [YOLO v8](./3_yolov8_aircraft.ipynb), [Faster RCNN](./4_Faster_RCNN.ipynb), [CenterNet](./5_CenterNet.ipynb), [RetinaNet](./6_RetinaNet.ipynb), [DETR](./7_DETR.ipynb), [RTMDet](./8_rtmdet.ipynb), 
+
+All the obtained results are given in the notebooks:
+
+[9_result_vizualiser.ipynb](./9_result_vizualiser.ipynb), [10_evaluation_metrics.ipynb](./10_evaluation_metrics.ipynb) and [inference_tester.ipynb](./inference_tester.ipynb).
 
 ## Evaluation Metrics
 
