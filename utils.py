@@ -35,6 +35,17 @@ def plot_curves(directory, color='sienna', separate_subplots=True):
     # Get a list of CSV files in the directory and sort them
     csv_files = sorted([file for file in os.listdir(directory) if file.endswith('.csv')])
 
+    color_map = {
+        0: 'blue',
+        1: 'red',
+        2: 'green',
+        3: 'black',
+        4: 'gray',
+        5: 'brown',
+        6: 'violet',
+        7: 'skyblue'
+    }
+
     if separate_subplots:
         # Calculate the number of subplots needed based on the number of CSV files
         num_files = len(csv_files)
@@ -58,7 +69,7 @@ def plot_curves(directory, color='sienna', separate_subplots=True):
             values = df['Value']
 
             # Plotting the curve with the specified color
-            axs[i].plot(steps, values, color=color)
+            axs[i].plot(steps, values, color=color_map[i])
             axs[i].set_title(os.path.splitext(csv_file)[0])  # Use file name as title
             axs[i].grid(True)
 
@@ -82,17 +93,18 @@ def plot_curves(directory, color='sienna', separate_subplots=True):
             values = df['Value']
 
             # Plotting each curve with a different color
-            ax.plot(steps, values, label=os.path.splitext(csv_file)[0], color=plt.cm.viridis(i / len(csv_files)))
+            ax.plot(steps, values, label=os.path.splitext(csv_file)[0], color=color_map[i])
 
         # Customize the plot
-        plt.legend(fontsize=18)
-        plt.xlabel("Epochs")
-        plt.ylabel("Values")
+        plt.legend(fontsize=26, loc='lower right')
+        plt.xlabel("Epochs", fontsize=24)
+        plt.ylabel("Values", fontsize=24)
         plt.ylim(0, 1)
         plt.xlim(0, 500)
-        plt.xticks(fontsize=18)
-        plt.yticks(fontsize=18)
+        plt.xticks(fontsize=24)
+        plt.yticks(fontsize=24)
         plt.grid(True)
+        plt.savefig("output_fig.png")
         plt.show()
 
 
