@@ -65,6 +65,9 @@ The study utilizes two popular deep learning frameworks for object detection:
 
 As the HRPlanesv2 dataset is provided with YOLO annotation (txt file with bounding boxes), conversion to JSON COCO annotation is necessary for detectron2 and mmdetection compatibility. The conversion process is detailed in "__data_collection.ipynb" using the [Yolo-to-COCO-format-converter](https://github.com/Taeyoung96/Yolo-to-COCO-format-converter) repository.
 
+## Run the training from scratch
+
+
 ## Weights download
 
 The resulting weights of the trained deep learning model have are publically available on [Google-Drive](https://drive.google.com/file/d/13aXBJcxKXjqyq7ycAg4LIe8TEmrX-kxa/view?usp=sharing). These steps are also available at the begining of the [result_vizualiser.ipynb](./result_vizualiser.ipynb).
@@ -86,6 +89,10 @@ pip install --upgrade gdown
 ```
 
 ## Evaluation Metrics
+
+The  evaluation metrics used for this project are: iou, recall and average precision. This histogram figure from the paper summerizes the obtained metrics:
+<img src="output_histogram.png" alt="histogram" title="hist">
+
 
 Some previews of the results:
 
