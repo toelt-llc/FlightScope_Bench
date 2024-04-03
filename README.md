@@ -98,7 +98,7 @@ pip install --upgrade gdown
 
 All the training and inferences are given in the notebooks:
 
-[SSD](./1_SSD.ipynb), [YOLO v5](./2_yolov5_aircraft.ipynb), [YOLO v8](./3_yolov8_aircraft.ipynb), [Faster RCNN](./4_Faster_RCNN.ipynb), [CenterNet](./5_CenterNet.ipynb), [RetinaNet](./6_RetinaNet.ipynb), [DETR](./7_DETR.ipynb), [RTMDet](./8_rtmdet.ipynb), 
+[SSD](./1_SSD.ipynb), [YOLO v5](./2_yolov5_aircraft.ipynb), [YOLO v8](./3_yolov8_aircraft.ipynb), [Faster RCNN](./4_Faster_RCNN.ipynb), [CenterNet](./5_CenterNet.ipynb), [RetinaNet](./6_RetinaNet.ipynb), [DETR](./7_DETR.ipynb), [RTMDet](./8_rtmdet.ipynb).
 
 All the obtained results are given in the notebooks:
 
