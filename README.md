@@ -1,4 +1,4 @@
-# FlightScope_Bench
+# FlightScope
 Official implementation of the paper "FlightScope: A Deep Comprehensive Assessment of Aircraft Detection Algorithms in Satellite Imagery"
 [ArXiV Preprint](https://arxiv.org/abs/2404.02877)
 
@@ -12,6 +12,31 @@ This study compares multiple deep learning algorithms, including `Faster RCNN`, 
 The following video shows the inference of Barcelona Airport of the trained algorithms with a detection threshold of 70%. You can find the original video at [ShutterStock](https://www.shutterstock.com/video/clip-1023402088-barcelona-airport-top-view-aircraft-terminal-building).
 
 [concatenated_video.webm](https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/a5269a4b-9391-4e39-96a9-908802495206)
+
+- [FlightScope](#flightscope)
+  - [Summary](#summary)
+  - [Datasets](#datasets)
+    - [HRPlanesv2 Dataset](#hrplanesv2-dataset)
+    - [GDIT Dataset](#gdit-dataset)
+  - [Algorithms Brief Description](#algorithms-brief-description)
+    - [SSD](#ssd)
+    - [Faster RCNN](#faster-rcnn)
+    - [CenterNet](#centernet)
+    - [RetinaNet](#retinanet)
+    - [DETR](#detr)
+    - [RTMdet](#rtmdet)
+    - [YOLOv5](#yolov5)
+    - [YOLOv8](#yolov8)
+  - [Instructions](#instructions)
+    - [1. Clone Repository](#1-clone-repository)
+    - [2. Setup Conda Environment](#2-setup-conda-environment)
+    - [3. Set Up Workflows](#3-set-up-workflows)
+    - [4. Annotation Conversion](#4-annotation-conversion)
+    - [5. Weights Download](#5-weights-download)
+  - [Usage (Train from Scratch)](#usage-train-from-scratch)
+  - [Evaluation Metrics](#evaluation-metrics)
+  - [Citation](#citation)
+  - [Copyright Notice](#copyright-notice)
 
 ### Datasets:
 
@@ -78,9 +103,9 @@ conda create --name flightscope python=3.8 -y
 conda activate flightscope
 ```
 
-Then proceed by following the instruction in the [**next step**](#3.-Proceed-by-setting-up-the-Workflows)
+Then proceed by following the instruction in the [**next step**](#3-set-up-workflows)
 
-### 3. Proceed by setting up the Workflows
+### 3. Set Up Workflows
 
 The study utilizes two popular deep learning frameworks for object detection:
 
@@ -144,6 +169,20 @@ Some previews of the results:
 <img width="542" alt="bbox_mAP50" src="https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/3f0cd2e4-0d9b-4de9-b2b7-8e473b486f4d">
 <img width="542" alt="bbox_mAP75" src="https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/a4cfabfb-a635-4f1f-bb78-917885790d68">
 
+## Citation
+
+If our work is useful for your research, please consider citing us:
+
+```latex
+@misc{ghazouali2024flightscope,
+      title={FlightScope: A Deep Comprehensive Assessment of Aircraft Detection Algorithms in Satellite Imagery}, 
+      author={Safouane El Ghazouali and Arnaud Gucciardi and Nicola Venturi and Michael Rueegsegger and Umberto Michelucci},
+      year={2024},
+      eprint={2404.02877},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
 
 ## Copyright Notice
 
