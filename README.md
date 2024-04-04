@@ -78,7 +78,7 @@ conda create --name flightscope python=3.8 -y
 conda activate flightscope
 ```
 
-Then proceed by following the instruction in the [**next step**](###3.-Proceed-by-setting-up-the-Workflows)
+Then proceed by following the instruction in the [**next step**](#3.-Proceed-by-setting-up-the-Workflows)
 
 ### 3. Proceed by setting up the Workflows
 
