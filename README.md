@@ -135,10 +135,12 @@ The  evaluation metrics used for this project are: iou, recall and average preci
 
 Some previews of the results:
 
-- Preview of detection results of CenterNet and DETR
+- Preview samples of detection results of CenterNet and DETR
 
-<img src="./inference_test/results/centernet_inference/vis/55aa185a-01c8-4668-ae87-1f1d67d15a08.jpg" alt="Detected Aircrafts" title="CenterNet" width="400">
-<img src="./inference_test/results/detr_inference/vis/55aa185a-01c8-4668-ae87-1f1d67d15a08.jpg" alt="Detected Aircrafts" title="DETR" width="400">
+<div style="display: flex;">
+    <img src="./inference_test/results/centernet_inference/vis/55aa185a-01c8-4668-ae87-1f1d67d15a08.jpg" alt="Detected Aircrafts" title="CenterNet" width="50%">
+    <img src="./inference_test/results/detr_inference/vis/55aa185a-01c8-4668-ae87-1f1d67d15a08.jpg" alt="Detected Aircrafts" title="DETR" width="50%">
+</div>
 
 <!--- - Bounding box mean average precision, respectively at IoU=0.5 and IoU=0.75-->
 <!---<img width="542" alt="bbox_mAP50" src="https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/3f0cd2e4-0d9b-4de9-b2b7-8e473b486f4d">-->
