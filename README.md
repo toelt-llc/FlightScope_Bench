@@ -138,8 +138,8 @@ Some previews of the results:
 - Preview samples of detection results of CenterNet and DETR
 
 <div style="display: flex;">
-    <img src="./inference_test/results/centernet_inference/vis/55aa185a-01c8-4668-ae87-1f1d67d15a08.jpg" alt="Detected Aircrafts" title="CenterNet" width="50%">
-    <img src="./inference_test/results/detr_inference/vis/55aa185a-01c8-4668-ae87-1f1d67d15a08.jpg" alt="Detected Aircrafts" title="DETR" width="50%">
+    <img src="./inference_test/results/centernet_inference/vis/55aa185a-01c8-4668-ae87-1f1d67d15a08.jpg" alt="Detected Aircrafts" title="CenterNet" width="40%">
+    <img src="./inference_test/results/detr_inference/vis/55aa185a-01c8-4668-ae87-1f1d67d15a08.jpg" alt="Detected Aircrafts" title="DETR" width="40%">
 </div>
 
 <!--- - Bounding box mean average precision, respectively at IoU=0.5 and IoU=0.75-->
