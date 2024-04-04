@@ -19,21 +19,13 @@ The following video shows the inference of Barcelona Airport of the trained algo
     - [HRPlanesv2 Dataset](#hrplanesv2-dataset)
     - [GDIT Dataset](#gdit-dataset)
   - [Algorithms Brief Description](#algorithms-brief-description)
-    - [SSD](#ssd)
-    - [Faster RCNN](#faster-rcnn)
-    - [CenterNet](#centernet)
-    - [RetinaNet](#retinanet)
-    - [DETR](#detr)
-    - [RTMdet](#rtmdet)
-    - [YOLOv5](#yolov5)
-    - [YOLOv8](#yolov8)
   - [Instructions](#instructions)
-    - [1. Clone Repository](#1-clone-repository)
-    - [2. Setup Conda Environment](#2-setup-conda-environment)
-    - [3. Set Up Workflows](#3-set-up-workflows)
-    - [4. Annotation Conversion](#4-annotation-conversion)
-    - [5. Weights Download](#5-weights-download)
-  - [Usage (Train from Scratch)](#usage-train-from-scratch)
+    - [Clone Repository](#clone-repository)
+    - [Setup Conda Environment](#setup-conda-environment)
+    - [Set Up Workflows](#set-up-workflows)
+    - [Annotation Conversion](#annotation-conversion)
+    - [Weights Download](#weights-download)
+  - [Usage](#usage)
   - [Evaluation Metrics](#evaluation-metrics)
   - [Citation](#citation)
   - [Copyright Notice](#copyright-notice)
@@ -48,7 +40,7 @@ The HRPlanesv2 dataset contains 2120 VHR Google Earth images. To further improve
 
 The GDIT Aerial Airport dataset consists of aerial images (satellite/remote sensing) containing instances of parked airplanes. All plane types are grouped into a single named "airplane". The total number of images is 338 broadcasted between train, test and validation subsets. All the annotation are in yolo format as well. [Link](https://universe.roboflow.com/gdit/aerial-airport/browse?queryText=&pageSize=200&startingIndex=200&browseQuery=true)
 
-## Algorithms brief description (with usefull blog links)
+## Algorithms Brief Description
 
 1. SSD:
 
@@ -82,9 +74,9 @@ The GDIT Aerial Airport dataset consists of aerial images (satellite/remote sens
 
 [YOLOv8](https://arxiv.org/abs/2305.09972) introduces advancements in object detection by refining the architecture, incorporating feature pyramid networks, and optimizing the training pipeline. It enhances accuracy and speed in detecting objects.
 
-## INSTRUCTIONS:
+## Instructions
 
-### 1. Clone repository:
+### Clone Repository
 
 ```bash
 sudo apt-get update && upgrade
@@ -94,7 +86,7 @@ git clone https://github.com/toelt-llc/FlightScope_Bench.git
 cd FlightScope_Bench/
 ```
 
-### 2. Setup conda environment
+### Setup Conda Environment
 
 To create conda environment, run the following code:
 
@@ -105,7 +97,7 @@ conda activate flightscope
 
 Then proceed by following the instruction in the [**next step**](#3-set-up-workflows)
 
-### 3. Set Up Workflows
+### Set Up Workflows
 
 The study utilizes two popular deep learning frameworks for object detection:
 
@@ -119,11 +111,11 @@ The study utilizes two popular deep learning frameworks for object detection:
   - Information about Ultralytics [YOLOv5](https://github.com/ultralytics/yolov5) and [YOLOv8](https://github.com/ultralytics/ultralytics) is available in [__algorithms_collection.ipynb](./__algorithms_collection.ipynb).
 
 
-### 4. Annotation Conversion
+### Annotation Conversion
 
 As the HRPlanesv2 dataset is provided with YOLO annotation (txt file with bounding boxes), conversion to JSON COCO annotation is necessary for detectron2 and mmdetection compatibility. The conversion process is detailed in "__data_collection.ipynb" using the [Yolo-to-COCO-format-converter](https://github.com/Taeyoung96/Yolo-to-COCO-format-converter) repository.
 
-### 5. Weights download
+### Weights Download
 
 The resulting weights of the trained deep learning model have are publically available on [Google-Drive](https://drive.google.com/file/d/13aXBJcxKXjqyq7ycAg4LIe8TEmrX-kxa/view?usp=sharing). These steps are also available at the begining of the [result_vizualiser.ipynb](./result_vizualiser.ipynb).
 
@@ -143,7 +135,8 @@ pip install --upgrade gdown
 %unzip output_tensor.zip
 ```
 
-## Usage (Train from scratch)
+## Usage
+(Train from scratch)
 
 All the training and inferences are given in the notebooks:
 
