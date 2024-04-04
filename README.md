@@ -42,37 +42,18 @@ The GDIT Aerial Airport dataset consists of aerial images (satellite/remote sens
 
 ## Algorithms Brief Description
 
-1. SSD:
+## Algorithms Description
 
-[SSD](https://medium.com/axinc-ai/mobilenetssd-a-machine-learning-model-for-fast-object-detection-37352ce6da7d) is a real-time object detection algorithm that predicts bounding boxes and class scores for multiple fixed-size anchor boxes at different scales. It efficiently utilizes convolutional feature maps to achieve fast and accurate detection.
-
-2. Faster RCNN:
-
-[Faster-RCNN](https://blog.paperspace.com/faster-r-cnn-explained-object-detection/#:~:text=Faster%20R%2DCNN%20is%20a%20single%2Dstage%20model%20that%20is,traditional%20algorithms%20like%20Selective%20Search.) is a two-stage object detection framework. It employs a region proposal network (RPN) to generate potential bounding box proposals, combining them with deep feature maps for accurate object detection.
-
-3. CenterNet
-
-[CenterNet](https://towardsdatascience.com/centernet-explained-a7386f368962) is a single-stage object detection approach that focuses on predicting object centers and regressing bounding boxes. It achieves high accuracy through keypoint estimation for precise object localization.
-
-4. RetinaNet
-
-[RetinaNet](https://www.analyticsvidhya.com/blog/2022/09/retinanet-advanced-computer-vision/) is recognized for its focal loss, addressing the class imbalance issue in one-stage detectors. By combining a feature pyramid network with focal loss, RetinaNet excels in detecting objects at various scales with improved accuracy.
-
-5. DETR
-
-[DETR](https://medium.com/visionwizard/detr-b677c7016a47) is a transformer-based object detection model that replaces traditional anchor-based methods with a set-based approach. It utilizes the transformer architecture to comprehend global context and achieve precise object localization.
-
-6. RTMdet
-
-[RTMdet](https://mmyolo.readthedocs.io/en/latest/recommended_topics/algorithm_descriptions/rtmdet_description.html) is an advanced object detection model that leverages a novel framework called Rotate to Maximum (RTM) to improve accuracy compared to traditional Faster R-CNN models. The model is effective in handling objects with varying orientations, resulting in improved detection accuracy. However, its computational complexity may impact performance compared to other state-of-the-art models.
-
-7. YOLOv5:
-
-[YOLOv5](https://sh-tsang.medium.com/brief-review-yolov5-for-object-detection-84cc6c6a0e3a#:~:text=YOLOv5%20uses%20the%20methods%20of,for%20detecting%20different%20scales%20targets) utilizes methods of anchor box refinement, PANet feature pyramid network, and CSPNet for detecting different scale targets. It improves accuracy and efficiency in object detection tasks.
-
-8. YOLOv8:
-
-[YOLOv8](https://arxiv.org/abs/2305.09972) introduces advancements in object detection by refining the architecture, incorporating feature pyramid networks, and optimizing the training pipeline. It enhances accuracy and speed in detecting objects.
+| Model       | Description                                                                                                                                                                                         |
+|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SSD         | [SSD](https://medium.com/axinc-ai/mobilenetssd-a-machine-learning-model-for-fast-object-detection-37352ce6da7d) is a real-time object detection algorithm that predicts bounding boxes and class scores for multiple fixed-size anchor boxes at different scales. It efficiently utilizes convolutional feature maps to achieve fast and accurate detection.                                            |
+| Faster RCNN | [Faster-RCNN](https://blog.paperspace.com/faster-r-cnn-explained-object-detection/#:~:text=Faster%20R%2DCNN%20is%20a%20single%2Dstage%20model%20that%20is,traditional%20algorithms%20like%20Selective%20Search.) is a two-stage object detection framework. It employs a region proposal network (RPN) to generate potential bounding box proposals, combining them with deep feature maps for accurate object detection.                                        |
+| CenterNet   | [CenterNet](https://towardsdatascience.com/centernet-explained-a7386f368962) is a single-stage object detection approach that focuses on predicting object centers and regressing bounding boxes. It achieves high accuracy through keypoint estimation for precise object localization.                                                                                                                                  |
+| RetinaNet   | [RetinaNet](https://www.analyticsvidhya.com/blog/2022/09/retinanet-advanced-computer-vision/) is recognized for its focal loss, addressing the class imbalance issue in one-stage detectors. By combining a feature pyramid network with focal loss, RetinaNet excels in detecting objects at various scales with improved accuracy.                                                                                            |
+| DETR        | [DETR](https://medium.com/visionwizard/detr-b677c7016a47) is a transformer-based object detection model that replaces traditional anchor-based methods with a set-based approach. It utilizes the transformer architecture to comprehend global context and achieve precise object localization.                                                                                                             |
+| RTMdet      | [RTMdet](https://mmyolo.readthedocs.io/en/latest/recommended_topics/algorithm_descriptions/rtmdet_description.html) is an advanced object detection model that leverages a novel framework called Rotate to Maximum (RTM) to improve accuracy compared to traditional Faster R-CNN models. The model is effective in handling objects with varying orientations, resulting in improved detection accuracy. However, its computational complexity may impact performance compared to other state-of-the-art models. |
+| YOLOv5      | [YOLOv5](https://sh-tsang.medium.com/brief-review-yolov5-for-object-detection-84cc6c6a0e3a#:~:text=YOLOv5%20uses%20the%20methods%20of,for%20detecting%20different%20scales%20targets) utilizes methods of anchor box refinement, PANet feature pyramid network, and CSPNet for detecting different scale targets. It improves accuracy and efficiency in object detection tasks.                                                          |
+| YOLOv8      | [YOLOv8](https://arxiv.org/abs/2305.09972) introduces advancements in object detection by refining the architecture, incorporating feature pyramid networks, and optimizing the training pipeline. It enhances accuracy and speed in detecting objects.                                                                                                              |
 
 ## Instructions
 
