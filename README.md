@@ -137,12 +137,13 @@ Some previews of the results:
 
 - Preview of detection results of CenterNet and DETR
 
-<img src="./inference_test/results/centernet_inference/vis/55aa185a-01c8-4668-ae87-1f1d67d15a08.jpg" alt="Detected Aircrafts" title="CenterNet" width="542">
-<img src="./inference_test/results/detr_inference/vis/55aa185a-01c8-4668-ae87-1f1d67d15a08.jpg" alt="Detected Aircrafts" title="DETR" width="542">
+<img src="./inference_test/results/centernet_inference/vis/55aa185a-01c8-4668-ae87-1f1d67d15a08.jpg" alt="Detected Aircrafts" title="CenterNet" width="400">
+<img src="./inference_test/results/detr_inference/vis/55aa185a-01c8-4668-ae87-1f1d67d15a08.jpg" alt="Detected Aircrafts" title="DETR" width="400">
 
-- Bounding box mean average precision, respectively at IoU=0.5 and IoU=0.75
-<img width="542" alt="bbox_mAP50" src="https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/3f0cd2e4-0d9b-4de9-b2b7-8e473b486f4d">
-<img width="542" alt="bbox_mAP75" src="https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/a4cfabfb-a635-4f1f-bb78-917885790d68">
+<!--- - Bounding box mean average precision, respectively at IoU=0.5 and IoU=0.75-->
+<!---<img width="542" alt="bbox_mAP50" src="https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/3f0cd2e4-0d9b-4de9-b2b7-8e473b486f4d">-->
+<!---<img width="542" alt="bbox_mAP75" src="https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/a4cfabfb-a635-4f1f-bb78-917885790d68">-->
+
 
 ## Citation
 
