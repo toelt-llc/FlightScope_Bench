@@ -6,7 +6,9 @@ Official implementation of the paper "FlightScope: A Deep Comprehensive Assessme
 
 This study compares multiple deep learning algorithms, including `Faster RCNN`, `DETR`, `SSD`, `RTMdet`, `RetinaNet`, `CenterNet`, `YOLOv5`, and `YOLOv8`, trained and evaluated on aerial images for the detection and localization of aircrafts. The graphical summary of the work is presented if the following figure:
 
-![graphical_summary](images/flightscope_graphical.png){:width="70%"}
+<!---![graphical_summary](images/flightscope_graphical.png){:width="70%"}-->
+<img src='figure/rstudio.png' width='70%'>
+
 
 
 The following video shows the inference of Barcelona Airport of the trained algorithms with a detection threshold of 70%. You can find the original video at [ShutterStock](https://www.shutterstock.com/video/clip-1023402088-barcelona-airport-top-view-aircraft-terminal-building).
