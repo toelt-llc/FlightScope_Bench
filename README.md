@@ -1,15 +1,19 @@
 # FlightScope_Bench
-A Benchmark of State-of-the-art Object Detection Algorithms For Aircraft Localization
+Official implementation of the paper "FlightScope: A Deep Comprehensive Assessment of Aircraft Detection Algorithms in Satellite Imagery"
+[ArXiV Preprint](https://arxiv.org/abs/2404.02877)
 
-This repository contains code for a Flightscope benchmark paper. A comparative study of aircraft detection from remote sensing images has been conducted. The study compares multiple algorithms, including `Faster RCNN`, `DETR`, `SSD`, `RTMdet`, `RetinaNet`, `CenterNet`, `YOLOv5`, and `YOLOv8`.
+## Summary
 
-The following Gif is a video inference of Barcelona Airport of the trained algorithms with a detection threshold of 70%. You can find the original video at [ShutterStock](https://www.shutterstock.com/video/clip-1023402088-barcelona-airport-top-view-aircraft-terminal-building).
+This study compares multiple deep learning algorithms, including `Faster RCNN`, `DETR`, `SSD`, `RTMdet`, `RetinaNet`, `CenterNet`, `YOLOv5`, and `YOLOv8`, trained and evaluated on aerial images for the detection and localization of aircrafts. The graphical summary of the work is presented if the following figure:
 
-<!--![OD_previewreduced-ezgif com-optimize](https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/0d3b0fb7-6164-43d1-8e02-99e7d56a47f0)-->
+![graphical_summary](images/flightscope_graphical.png)
+
+
+The following video shows the inference of Barcelona Airport of the trained algorithms with a detection threshold of 70%. You can find the original video at [ShutterStock](https://www.shutterstock.com/video/clip-1023402088-barcelona-airport-top-view-aircraft-terminal-building).
 
 [concatenated_video.webm](https://github.com/toelt-llc/FlightScope_Bench/assets/54261127/a5269a4b-9391-4e39-96a9-908802495206)
 
-## Datasets:
+### Datasets:
 
 - **HRPlanesv2 Dataset** (for the training and evaluation):
 
@@ -18,19 +22,6 @@ The HRPlanesv2 dataset contains 2120 VHR Google Earth images. To further improve
 - **GDIT Dataset** (for evaluation):
 
 The GDIT Aerial Airport dataset consists of aerial images (satellite/remote sensing) containing instances of parked airplanes. All plane types are grouped into a single named "airplane". The total number of images is 338 broadcasted between train, test and validation subsets. All the annotation are in yolo format as well. [Link](https://universe.roboflow.com/gdit/aerial-airport/browse?queryText=&pageSize=200&startingIndex=200&browseQuery=true)
-
-## Workflows
-
-The study utilizes two popular deep learning frameworks for object detection:
-
-- [mmdetection](https://github.com/open-mmlab/mmdetection)
-  - The installation process for mmdetection is detailed in the [_mmdetection_install.ipynb](./_mmdetection_install.ipynb) notebook.
-
-- [detectron2](https://github.com/facebookresearch/detectron2)
-  - The setup for detectron2 is explained in [__algorithms_collection.ipynb](./__algorithms_collection.ipynb) .
-
-- [Ultralytics YOLO](https://github.com/ultralytics/)
-  - Information about Ultralytics [YOLOv5](https://github.com/ultralytics/yolov5) and [YOLOv8](https://github.com/ultralytics/ultralytics) is available in [__algorithms_collection.ipynb](./__algorithms_collection.ipynb).
 
 ## Algorithms brief description (with usefull blog links)
 
@@ -66,15 +57,48 @@ The study utilizes two popular deep learning frameworks for object detection:
 
 [YOLOv8](https://arxiv.org/abs/2305.09972) introduces advancements in object detection by refining the architecture, incorporating feature pyramid networks, and optimizing the training pipeline. It enhances accuracy and speed in detecting objects.
 
-## Annotation Conversion
+## INSTRUCTIONS:
+
+### 1. Clone repository:
+
+```bash
+sudo apt-get update && upgrade
+```
+```bash
+git clone https://github.com/toelt-llc/FlightScope_Bench.git
+cd FlightScope_Bench/
+```
+
+### 2. Setup conda environment
+
+To create conda environment, run the following code:
+
+```bash
+conda create --name flightscope python=3.8 -y
+conda activate flightscope
+```
+
+Then proceed by following the instruction in the [**next step**](###3.-Proceed-by-setting-up-the-Workflows)
+
+### 3. Proceed by setting up the Workflows
+
+The study utilizes two popular deep learning frameworks for object detection:
+
+- [mmdetection](https://github.com/open-mmlab/mmdetection)
+  - The installation process for mmdetection is detailed in the [_mmdetection_install.ipynb](./_mmdetection_install.ipynb) notebook.
+
+- [detectron2](https://github.com/facebookresearch/detectron2)
+  - The setup for detectron2 is explained in [__algorithms_collection.ipynb](./__algorithms_collection.ipynb).
+
+- [Ultralytics YOLO](https://github.com/ultralytics/)
+  - Information about Ultralytics [YOLOv5](https://github.com/ultralytics/yolov5) and [YOLOv8](https://github.com/ultralytics/ultralytics) is available in [__algorithms_collection.ipynb](./__algorithms_collection.ipynb).
+
+
+### 4. Annotation Conversion
 
 As the HRPlanesv2 dataset is provided with YOLO annotation (txt file with bounding boxes), conversion to JSON COCO annotation is necessary for detectron2 and mmdetection compatibility. The conversion process is detailed in "__data_collection.ipynb" using the [Yolo-to-COCO-format-converter](https://github.com/Taeyoung96/Yolo-to-COCO-format-converter) repository.
 
-## Run the training from scratch
-
-You can run
-
-## Weights download
+### 5. Weights download
 
 The resulting weights of the trained deep learning model have are publically available on [Google-Drive](https://drive.google.com/file/d/13aXBJcxKXjqyq7ycAg4LIe8TEmrX-kxa/view?usp=sharing). These steps are also available at the begining of the [result_vizualiser.ipynb](./result_vizualiser.ipynb).
 
@@ -107,8 +131,7 @@ All the obtained results are given in the notebooks:
 ## Evaluation Metrics
 
 The  evaluation metrics used for this project are: iou, recall and average precision. This histogram figure from the paper summerizes the obtained metrics:
-<img src="output_histogram.png" alt="histogram" title="hist">
-
+![output_histogram](images/output_histogram.png)
 
 Some previews of the results:
 
@@ -136,3 +159,4 @@ This code is free to use for research and non-commercial purposes.
 
 This code is provided by [Safouane El Ghazouali](https://github.com/safouane95), PhD, Senior researcher AND [Arnaud Gucciardi](https://github.com/a-gucciardi).
 For personal contact: [safouane.elghazouali@gmail.com](mailto:safouane.elghazouali@gmail.com).
+
