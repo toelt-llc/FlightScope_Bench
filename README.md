@@ -1,5 +1,5 @@
 # FlightScope
-Official implementation of the paper "FlightScope: A Deep Comprehensive Assessment of Aircraft Detection Algorithms in Satellite Imagery"
+Official implementation of the review paper "FlightScope: A Deep Comprehensive Assessment of Aircraft Detection Algorithms in Satellite Imagery"
 
 Paper: [![arXiv](https://img.shields.io/badge/arXiv-2404.02877-<COLOR>.svg)](https://arxiv.org/abs/2404.02877)
 
